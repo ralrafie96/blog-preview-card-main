@@ -1,34 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Blog preview card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: "Figtree-VariableFont_wght";
+      src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+    }
+
+    @font-face {
+      font-family: "Figtree-Italic-VariableFont_wght";
+      src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+    }
+
+    @font-face {
+      font-family: "Figtree-ExtraBold";
+      src: url("./assets/fonts/static/Figtree-ExtraBold.ttf");
+    }
+
+    @font-face {
+      font-family: "Figtree-SemiBold";
+      src: url("./assets/fonts/static/Figtree-SemiBold.ttf");
+    }
+
+    body {
+      font-family: "Figtree-VariableFont_wght";
+      background-color: hsl(47, 88%, 63%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+      margin: 0;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      border-radius: 2rem;
+      padding: 1rem;
+      background-color: hsl(0, 0%, 100%);
+      max-width: 18rem;
+      box-shadow: 5px 5px 0px 0px rgb(0, 0, 0);
+      -webkit-box-shadow: 5px 5px 0px 0px rgb(0, 0, 0);
+      -moz-box-shadow: 5px 5px 0px 0px rgb(0, 0, 0);
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+      -webkit-box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+      -moz-box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+    }
+
+    .card-img {
+      border-radius: 1rem;
+      max-width: fit-content;
+    }
+
+    .tag {
+      font-weight: bold;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      background-color: hsl(47, 88%, 63%);
+      border-radius: 0.5rem;
+      width: min-content;
+    }
+
+    .date {
+      font-family: "Figtree-SemiBold";
+      color: hsl(0, 0%, 50%);
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-family: "Figtree-ExtraBold";
+      margin: 0.5rem 0;
+    }
+
+    .description {
+      color: hsl(0, 0%, 50%);
+    }
+
+    .card-footer {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 0.25rem;
+      align-items: center;
+      font-family: "Figtree-ExtraBold";
+    }
+
+    .poster-img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="card">
+    <img src="./assets/images/illustration-article.svg" alt="My Happy SVG" class="card-img" />
+    <div class="tag">
+      Learning
+    </div>
+    <div class="date">
+      Published 21 Dec 2023
+    </div>
+    <div class="title">
+      HTML & CSS foundations
+    </div>
+    <div class="description">
+      These languages are the backbone of every website, defining structure, content, and presentation.
+    </div>
+    <div class="card-footer">
+      <img src="./assets/images/image-avatar.webp" alt="icon.png" class="poster-img" />
+      Greg Hooper
+    </div>
   </div>
+  <!-- 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
 </body>
+
 </html>
